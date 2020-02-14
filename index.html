@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Décors</title>
+    <style>
+
+        .fondslider {
+            background: pink);
+        }
+    </style>
     <!-- Bootsrap en local  -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Bootstrap CSS en CDN-->
@@ -14,7 +20,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <!-- la div container contient le contenu de la nav et le container n'est pas "fluid"  -->
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Décors</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -50,33 +56,81 @@
       
 
         <!-- le premier container avec notre carousel (ou diaporama, ou slider) -->
-        <div class="container">
+        <div class="container-fluid mt-4">
             <div class="row">
 
                 <div class="col-12">
 
                     <!-- le carousel  -->
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div id="monCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- les indicateurs  -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#monCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#monCarousel" data-slide-to="1"></li>
+                            <li data-target="#monCarousel" data-slide-to="2"></li>
+                        </ol>
+
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <img src="img/1920x500.gif" class="d-block w-100" alt="...">
+                          <div class="carousel-item active" data-interval="2000">
+                            <img src="img/motif2.jpg" class="d-block w-100" alt="décors : géométrique">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Décor 1</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
                           </div>
-                          <div class="carousel-item">
-                            <img src="img/1920x500.gif" class="d-block w-100" alt="...">
+                          <div class="carousel-item" data-interval="2000">
+                            <img src="img/image3.jpg" class="d-block w-100" alt="décors : mosaique">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="fondslider">Décor 2</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
                           </div>
-                          <div class="carousel-item">
-                            <img src="img/1920x500.gif" class="d-block w-100" alt="...">
+                          <div class="carousel-item" data-interval="2000">
+                            <img src="img/immeuble.jpg" class="d-block w-100" alt="décors : façade">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Décor 3</h5>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
                           </div>
                         </div>
+                        <!-- les flèches de control du carousel  -->
+                        <a class="carousel-control-prev" href="#monCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédente</span>
+                        </a>
+                        <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivante</span>
+                        </a>
+                          <!-- fermeture div id carousel  -->
                       </div>
 
-
+                      <!-- fermeture de la col-12  -->
                 </div>
 
             </div>
 
         <!-- fermeture container du slider  -->
         </div>
+        <div class="container mt-4">
+            <div class="row">
+
+                <div class="col-4 bg-secondary">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/400X200.gif" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-4 bg-primary">colonne</div>
+                <div class="col-4 bg-warning">colonne</div>
+            </div>
+
+        </div>
+
 
     <!-- les scripts en local  -->
     <script src="js/jquery-3.4.1slim.min.js"></script>
